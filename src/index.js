@@ -1,18 +1,15 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, hashHistory, browserHistory } from 'react-router'
-import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
+import { Router, browserHistory } from 'react-router'
+import configureStore from 'app/store/configureStore'
+import routes from 'app/routes'
 
-import Dashboard from 'modules/dashboard/DashboardContainer';
-import './index.css';
+const store = configureStore()
 
 render(
-  <Provider store="">
-    <Router history={hashHistory}>
-      <Route path="/" component={Dashboard}/>
-        <Route path="/inventory"/>
-    </Router>
+  <Provider store={store}>
+    <Router history={browserHistory} routes={routes} />
   </Provider>,
   document.getElementById('root')
-);
+)

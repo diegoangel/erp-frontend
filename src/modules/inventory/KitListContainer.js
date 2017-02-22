@@ -1,11 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Axios from 'axios';
 
 class Kit extends Component {
-
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return '';
