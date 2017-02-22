@@ -6,6 +6,7 @@ var InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 var WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 var getClientEnvironment = require('./env');
 var paths = require('./paths');
+var path = require('path');
 
 
 
@@ -68,6 +69,7 @@ module.exports = {
     // if there any conflicts. This matches Node resolution mechanism.
     // https://github.com/facebookincubator/create-react-app/issues/253
     fallback: paths.nodePaths,
+    root: [ path.resolve('./src') ],
     // These are the reasonable defaults supported by the Node ecosystem.
     // We also include JSX as a common component filename extension to support
     // some tools, although we do not recommend using it, see:
@@ -111,7 +113,8 @@ module.exports = {
           /\.(js|jsx)$/,
           /\.css$/,
           /\.json$/,
-          /\.svg$/
+          /\.svg$/,
+          /\.sass$/
         ],
         loader: 'url',
         query: {
@@ -131,6 +134,11 @@ module.exports = {
           // directory for faster rebuilds.
           cacheDirectory: true
         }
+      },
+      {
+        test: /\.scss$/,
+        include: paths.appSrc,
+        loaders: ["style", "css", "sass"]
       },
       // "postcss" loader applies autoprefixer to our CSS.
       // "css" loader resolves paths in CSS and adds assets as dependencies.

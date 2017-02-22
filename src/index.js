@@ -4,7 +4,7 @@ import { Router, Route, hashHistory, browserHistory } from 'react-router'
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 
-import Dashboard from './modules/dashboard/DashboardContainer';
+import Dashboard from 'modules/dashboard/DashboardContainer';
 import './index.css';
 
 render(
