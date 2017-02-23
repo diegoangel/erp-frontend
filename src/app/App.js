@@ -2,7 +2,14 @@ import React from 'react';
 import { Component } from 'react';
 import 'stylesheets/main.scss';
 
-class App extends Component {
+/**
+ * 
+ * 
+ * @export
+ * @class App
+ * @extends {Component}
+ */
+export default class App extends Component {
 	componentWillMount() {
     this.props.loadUserFromToken();
   }
@@ -15,5 +22,3 @@ class App extends Component {
     );
   }
 }
-
-export default App
