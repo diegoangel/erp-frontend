@@ -1,5 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
+import 'stylesheets/main.scss';
 
 class App extends Component {
 	componentWillMount() {

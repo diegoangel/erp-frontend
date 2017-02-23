@@ -1,7 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import promise from 'redux-promise';
-import reducer from 'app/reducers';
-
+import reducer from 'modules/app/reducers';
 
 export default function configureStore(initialState) {
   const finalCreateStore = compose(
