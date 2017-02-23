@@ -1,6 +1,5 @@
 import { connect } from 'react-redux'
 import Dashboard from 'modules/dashboard/Dashboard'
-import {actionCreator} from 'actionCreatorPath'
 
 const mapStateToProps = (state, ownProps) => {
     return {
@@ -11,7 +10,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         dispatch1: () => {
-            dispatch(actionCreator)
+            dispatch()
         }
     }
 }

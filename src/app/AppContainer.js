@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { meFromToken, meFromTokenSuccess, meFromTokenFailure, resetToken } from 'modules/user/UserActions';
-import App from 'modules/app/App.js';
+import App from 'app/App.js';
 
 const mapDispatchToProps = (dispatch) => {
   return {
