@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import { Router, browserHistory } from 'react-router'
 import configureStore from 'app/store/configureStore'
 import routes from 'app/routes'
-import "stylesheets/main.scss"
+import style from 'stylesheets/main.scss'
 
 const store = configureStore()
 
@@ -14,3 +14,5 @@ render(
   </Provider>,
   document.getElementById('root')
 )
+
+console.log('what is in style ' + (style));

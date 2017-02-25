@@ -114,7 +114,8 @@ module.exports = {
           /\.css$/,
           /\.json$/,
           /\.svg$/,
-          /\.sass$/
+          /\.sass$/,
+          /\.scss$/
         ],
         loader: 'url',
         query: {
